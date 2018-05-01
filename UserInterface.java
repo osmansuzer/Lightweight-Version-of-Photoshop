@@ -1,8 +1,7 @@
 /**
  * 
- * 			Osman Süzer
- * 			131044051
- * 
+ * 			
+ * Created by Osman SÃ¼zer
  */
 
 package application;
@@ -81,7 +80,7 @@ public final class UserInterface extends Application {
 		final FileChooser fileChooser = new FileChooser();
 
 		
-		//görüntünün seçilmesi için buton/////////////////////////////////////
+		//gÃ¶rÃ¼ntÃ¼nÃ¼n seÃ§ilmesi iÃ§in buton/////////////////////////////////////
 		final Button selectImgButton = new Button("Select Image");
 		GridPane.setConstraints(selectImgButton, 0, 0);
 		
@@ -97,7 +96,7 @@ public final class UserInterface extends Application {
 		
 		
 		
-		// seçilen görüntüyü göstermek için /////////////////////////////////////
+		// seÃ§ilen gÃ¶rÃ¼ntÃ¼yÃ¼ gÃ¶stermek iÃ§in /////////////////////////////////////
 		final GridPane myImagePane = new GridPane();
 		myImagePane.setPrefSize(10, 10);
 		myImagePane.setAlignment(Pos.CENTER);
@@ -105,7 +104,7 @@ public final class UserInterface extends Application {
 		/////////////////////////////////////////////////////////////////////////
 
 		
-		// hesaplamak için domain seçimi ///////////////////////////////////////
+		// hesaplamak iÃ§in domain seÃ§imi ///////////////////////////////////////
 		String textStyle2 = "-fx-font: 15px Tahoma; -fx-fill: green; -fx-stroke-width: 2;";
 
 		final ToggleGroup toggleDomainGroup = new ToggleGroup();
@@ -119,7 +118,7 @@ public final class UserInterface extends Application {
 		spatialDomainRadioButton.setToggleGroup(toggleDomainGroup);
 		frequencyDomainRadioButton.setToggleGroup(toggleDomainGroup);
 		
-		//implement ettikten sonra aç
+		//implement ettikten sonra aÃ§
 		frequencyDomainRadioButton.setDisable(true);
 
 		spatialDomainRadioButton.setSelected(true);
@@ -133,7 +132,7 @@ public final class UserInterface extends Application {
 		////////////////////////////////////////////////////////////////////////////////
 		
 		
-		// hesaplamak için domain seçimi ///////////////////////////////////////
+		// hesaplamak iÃ§in domain seÃ§imi ///////////////////////////////////////
 
 		final Text selectWorkOnText = new Text("Work On : ");
 		selectWorkOnText.setStyle(textStyle2);
@@ -168,7 +167,7 @@ public final class UserInterface extends Application {
 		
 		
 		
-		// kullanýcýnýn genel ayarlarý yapmasý için ////////////////////////////
+		// kullanÃ½cÃ½nÃ½n genel ayarlarÃ½ yapmasÃ½ iÃ§in ////////////////////////////
 		final Pane userSelectPane = new VBox(10);
 		
 		userSelectPane.getChildren().addAll(selectPathPane, myImagePane, workOnSelectPane);
@@ -176,7 +175,7 @@ public final class UserInterface extends Application {
 		////////////////////////////////////////////////////////////////////////
 		
 		
-		/// filtre ayarlarý için ///////////////////////////////////////////////
+		/// filtre ayarlarÃ½ iÃ§in ///////////////////////////////////////////////
 		
 		
 		final Text filterSizeText = new Text("Filter Size/Radius : ");
@@ -342,7 +341,7 @@ public final class UserInterface extends Application {
 		///////////////////////////////////////////////////////////////////////
 		
 		
-		/// sobel filtre ayarlarý için ///////////////////////////////////////////////
+		/// sobel filtre ayarlarÃ½ iÃ§in ///////////////////////////////////////////////
 		
 		final Text sobelText = new Text("-Sobel Filters-");
 		sobelText.setStyle(textStyle2);
@@ -438,7 +437,7 @@ public final class UserInterface extends Application {
 		///////////////////////////////////////////////////////////////////////
 		
 		
-		/// pointOperations ayarlarý için ///////////////////////////////////////////////
+		/// pointOperations ayarlarÃ½ iÃ§in ///////////////////////////////////////////////
 		
 		final Text pointOperationsText = new Text("-Point Operations-");
 		pointOperationsText.setStyle(textStyle2);
@@ -563,7 +562,7 @@ public final class UserInterface extends Application {
 		//////////////////////////////////////////////////////////////////////////7
 		
 
-		/// Morphologicals ayarlarý için ///////////////////////////////////////////////
+		/// Morphologicals ayarlarÃ½ iÃ§in ///////////////////////////////////////////////
 		
 		final Text morphologicalOperationsText = new Text("-Morphological Operations-");
 		morphologicalOperationsText.setStyle(textStyle2);
@@ -592,7 +591,7 @@ public final class UserInterface extends Application {
 		circleFilterRadioButton.setToggleGroup(filterToggleGroup);
 		crossFilterRadioButton.setToggleGroup(filterToggleGroup);
 		
-		//TODO implement ettikten sonra aç
+		//TODO implement ettikten sonra aÃ§
 		circleFilterRadioButton.setDisable(true);
 		
 		squareFilterRadioButton.setSelected(true);
@@ -1034,7 +1033,7 @@ public final class UserInterface extends Application {
 				}
 				else {
 
-					// TODO deðerleri doðru girip girmediðini kontrol et
+					// TODO deÃ°erleri doÃ°ru girip girmediÃ°ini kontrol et
 					int filterSize = Integer.parseInt(filterSizeTextField.getText());
 					
 					long tStart = System.currentTimeMillis();
@@ -1078,7 +1077,7 @@ public final class UserInterface extends Application {
 				}
 				else {
 
-					// TODO deðerleri doðru girip girmediðini kontrol et
+					// TODO deÃ°erleri doÃ°ru girip girmediÃ°ini kontrol et
 					Integer filterSize = Integer.parseInt(filterSizeTextField.getText());
 					
 					
@@ -1121,7 +1120,7 @@ public final class UserInterface extends Application {
 				}
 				else {
 
-					// TODO deðerleri doðru girip girmediðini kontrol et
+					// TODO deÃ°erleri doÃ°ru girip girmediÃ°ini kontrol et
 					int filterSize = Integer.parseInt(filterSizeTextField.getText());
 					
 					int sigma = Integer.parseInt(sigmaTextField.getText());
@@ -1167,7 +1166,7 @@ public final class UserInterface extends Application {
 				}
 				else {
 
-					// TODO deðerleri doðru girip girmediðini kontrol et
+					// TODO deÃ°erleri doÃ°ru girip girmediÃ°ini kontrol et
 					int filterSize = Integer.parseInt(filterSizeTextField.getText());
 					
 					int sigma = Integer.parseInt(sigmaTextField.getText());
@@ -1213,7 +1212,7 @@ public final class UserInterface extends Application {
 				else {
 
 					
-					// TODO deðerleri doðru girip girmediðini kontrol et
+					// TODO deÃ°erleri doÃ°ru girip girmediÃ°ini kontrol et
 					int filterSize = Integer.parseInt(filterSizeTextField.getText());
 					
 					Double coeff = Double.parseDouble(sobelCoefficientTextField.getText());
@@ -1260,7 +1259,7 @@ public final class UserInterface extends Application {
 				else {
 
 					
-					// TODO deðerleri doðru girip girmediðini kontrol et
+					// TODO deÃ°erleri doÃ°ru girip girmediÃ°ini kontrol et
 					int filterSize = Integer.parseInt(filterSizeTextField.getText());
 					
 					Double coeff = Double.parseDouble(sobelCoefficientTextField.getText());
@@ -1306,7 +1305,7 @@ public final class UserInterface extends Application {
 				else {
 
 					
-					// TODO deðerleri doðru girip girmediðini kontrol et
+					// TODO deÃ°erleri doÃ°ru girip girmediÃ°ini kontrol et
 					int filterSize = Integer.parseInt(filterSizeTextField.getText());
 					
 					Double coeff = Double.parseDouble(sobelCoefficientTextField.getText());
@@ -1353,7 +1352,7 @@ public final class UserInterface extends Application {
 				else {
 
 					
-					// TODO deðerleri doðru girip girmediðini kontrol et
+					// TODO deÃ°erleri doÃ°ru girip girmediÃ°ini kontrol et
 					int filterSize = Integer.parseInt(filterSizeTextField.getText());
 					
 					Double coeff = Double.parseDouble(sobelCoefficientTextField.getText());
@@ -1650,7 +1649,7 @@ public final class UserInterface extends Application {
 				}
 				else {
 						
-					// TODO deðerleri doðru girip girmediðini kontrol et
+					// TODO deÃ°erleri doÃ°ru girip girmediÃ°ini kontrol et
 					int N = Integer.parseInt(filterSizeTextField.getText());
 					
 					
@@ -1708,7 +1707,7 @@ public final class UserInterface extends Application {
 				}
 				else {
 					
-					// TODO deðerleri doðru girip girmediðini kontrol et
+					// TODO deÃ°erleri doÃ°ru girip girmediÃ°ini kontrol et
 					int N = Integer.parseInt(filterSizeTextField.getText());
 					
 					double [][] filter = ApplyFilter.squareFilter(N);
@@ -1767,7 +1766,7 @@ public final class UserInterface extends Application {
 				}
 				else {
 					
-					// TODO deðerleri doðru girip girmediðini kontrol et
+					// TODO deÃ°erleri doÃ°ru girip girmediÃ°ini kontrol et
 					int N = Integer.parseInt(filterSizeTextField.getText());
 					
 					
@@ -1826,7 +1825,7 @@ public final class UserInterface extends Application {
 				}
 				else {
 					
-					// TODO deðerleri doðru girip girmediðini kontrol et
+					// TODO deÃ°erleri doÃ°ru girip girmediÃ°ini kontrol et
 					int N = Integer.parseInt(filterSizeTextField.getText());
 					
 					
@@ -1886,7 +1885,7 @@ public final class UserInterface extends Application {
 				}
 				else {
 					
-					// TODO deðerleri doðru girip girmediðini kontrol et
+					// TODO deÃ°erleri doÃ°ru girip girmediÃ°ini kontrol et
 					int N = Integer.parseInt(filterSizeTextField.getText());
 					
 					double [][] filter = ApplyFilter.squareFilter(N);
@@ -1948,7 +1947,7 @@ public final class UserInterface extends Application {
 				}
 				else {
 					
-					// TODO deðerleri doðru girip girmediðini kontrol et
+					// TODO deÃ°erleri doÃ°ru girip girmediÃ°ini kontrol et
 					int N = Integer.parseInt(filterSizeTextField.getText());
 					 
 					double [][] filter = ApplyFilter.squareFilter(N);
@@ -2007,7 +2006,7 @@ public final class UserInterface extends Application {
 				}
 				else {
 					
-					// TODO deðerleri doðru girip girmediðini kontrol et
+					// TODO deÃ°erleri doÃ°ru girip girmediÃ°ini kontrol et
 					int N = Integer.parseInt(filterSizeTextField.getText());
 					
 					double [][] filter = ApplyFilter.squareFilter(N);
@@ -2067,7 +2066,7 @@ public final class UserInterface extends Application {
 				}
 				else {
 					
-					// TODO deðerleri doðru girip girmediðini kontrol et
+					// TODO deÃ°erleri doÃ°ru girip girmediÃ°ini kontrol et
 					int N = Integer.parseInt(filterSizeTextField.getText());
 					
 
@@ -2130,7 +2129,7 @@ public final class UserInterface extends Application {
 				}
 				else {
 					
-					// TODO deðerleri doðru girip girmediðini kontrol et
+					// TODO deÃ°erleri doÃ°ru girip girmediÃ°ini kontrol et
 					int N = Integer.parseInt(filterSizeTextField.getText());
 					
 					double [][] filter = ApplyFilter.squareFilter(N);
@@ -2536,8 +2535,5 @@ public final class UserInterface extends Application {
 	public static void main(String[] args) {
 		Application.launch(args);
 	}
-	
-	
-	
 	
 }
