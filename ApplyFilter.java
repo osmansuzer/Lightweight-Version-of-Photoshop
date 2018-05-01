@@ -1,8 +1,7 @@
 /**
- * 
- * 			Osman Süzer
- * 			131044051
+ * Lightweight Version of Photoshop			
  *
+ * Created by Osman SÃ¼zer
  */
 
 package application;
@@ -27,7 +26,6 @@ public class ApplyFilter {
 					else
 						output.setXYCDouble(x, y,c, img1.getXYCDouble(x, y, c));
 				}
-				
 			}
 		}
 		
@@ -48,8 +46,7 @@ public class ApplyFilter {
 						output.setXYCDouble(x, y, c, img2.getXYCDouble(x, y,c));
 					else
 						output.setXYCDouble(x, y,c, img1.getXYCDouble(x, y, c));
-				}
-				
+				}	
 			}
 		}
 		
@@ -139,7 +136,7 @@ public class ApplyFilter {
 	
 	private double[][] createLowPassFilterH1(int N){
 		
-		//TODO daha fazla oluþturabilirsen 3x3 yernine NxN yaz
+		//TODO daha fazla oluÃ¾turabilirsen 3x3 yernine NxN yaz
 		double[][] filter = new double[3][3];
 		
 		filter[0][0] = -1;
@@ -161,7 +158,7 @@ public class ApplyFilter {
 	
 	private double[][] createLowPassFilterH2(int N){
 		
-		//TODO daha fazla oluþturabilirsen 3x3 yernine NxN yaz
+		//TODO daha fazla oluÃ¾turabilirsen 3x3 yernine NxN yaz
 		double[][] filter = new double[3][3];
 		
 		filter[0][0] = 0.17;
@@ -182,7 +179,7 @@ public class ApplyFilter {
 	
 	private double[][] createLowPassFilterH3(int N){
 		
-		//TODO daha fazla oluþturabilirsen 3x3 yernine NxN yaz
+		//TODO daha fazla oluÃ¾turabilirsen 3x3 yernine NxN yaz
 		double[][] filter = new double[3][3];
 		
 		filter[0][0] = 0;
@@ -549,7 +546,6 @@ public class ApplyFilter {
 	}
 	
 	
-	//apply unSharp Filter (3x3) S is 1 //////////////////////////////////
 	public Image applyUnsharpMasking(Image img, int N, int S) {
 				
 		Image blurredImage = applyGaussianFilter(img, N, S);
@@ -559,7 +555,6 @@ public class ApplyFilter {
 	}
 	
 	
-	//apply Laplacian Filter (3x3) /////////////////////////////////////////////////////////////
 	public Image applyLaplacianFilter(Image img, int N, int type) {
 		
 		double[][] filter;
@@ -576,7 +571,6 @@ public class ApplyFilter {
 	
 	private double[][] createLaplacianFilterPositive(int N){
 		
-		//TODO daha fazla oluþturabilirsen 3x3 yernine NxN yaz
 		double[][] filter = new double[3][3];
 		
 		filter[0][0] = 0;
@@ -598,7 +592,6 @@ public class ApplyFilter {
 	
 	private double[][] createLaplacianFilterNegative(int N){
 		
-		//TODO daha fazla oluþturabilirsen 3x3 yernine NxN yaz
 		double[][] filter = new double[3][3];
 		
 		filter[0][0] = 0;
@@ -618,7 +611,6 @@ public class ApplyFilter {
 	}
 	
 	
-	//apply Sobel X Filter (3x3) /////////////////////////////////////////////////////////////
 	public Image applySobelHorizontalFilter(Image img, int N, double I) {
 		double[][] filter = createSobelHorizontalFilter(N, I);
 		filter = kernelReflection(filter);
@@ -627,7 +619,6 @@ public class ApplyFilter {
 	
 	private double[][] createSobelHorizontalFilter(int N, double I){
 		
-		//TODO daha fazla oluþturabilirsen 3x3 yernine NxN yaz
 		double[][] filter = new double[3][3];
 		
 		filter[0][0] = -1.0*I;
@@ -649,7 +640,6 @@ public class ApplyFilter {
 	}
 	
 	
-	//apply Sobel Y Filter (3x3) /////////////////////////////////////////////////////////////
 	public Image applySobelVerticalFilter(Image img, int N, double I) {
 		double[][] filter = createSobelVerticalFilter(N, I);
 		filter = kernelReflection(filter);
@@ -658,7 +648,6 @@ public class ApplyFilter {
 	
 	private double[][] createSobelVerticalFilter(int N, double I){
 		
-		//TODO daha fazla oluþturabilirsen 3x3 yernine NxN yaz
 		double[][] filter = new double[3][3];
 		
 		filter[0][0] = 1.0*I;
@@ -728,6 +717,7 @@ public class ApplyFilter {
 		double[][] filter = createGaussianFilter(N, S);
 		return applyFilter(img, filter);
 	}
+	
 	public double[][] createGaussianFilter(int N, int S){
 		
 		double[][] filter = new double[N][N];
@@ -745,13 +735,6 @@ public class ApplyFilter {
 	}
 	
 	
-	//apply Mean Filter//////////////////////////////////////////////////////////////////
-	
-	/**
-	 * @param img is original image to filter with Mean filter
-	 * @param N is filter size
-	 * @return filtered image with Mean filter
-	 */
 	public Image applyMeanFilter(Image img, int N) {
 		double[][] filter = createMeanFilter(N);
 		return applyFilter(img, filter);
@@ -770,8 +753,6 @@ public class ApplyFilter {
 		return filter;
 	}
 	
-	
-	//apply Median Filter ////////////////////////////////////////////////////////////////
 	public Image applyMedianFilter(Image img, int N) {
 		
 		Image output = img.newInstance(true);
@@ -865,8 +846,7 @@ public class ApplyFilter {
 				for (int c = 0; c < img.getCDim(); c++) {
 					temp.setXYCDouble(x+filter.length/2, y+filter.length/2,c, img.getXYCDouble(x, y,c));
 				}
-				
-				
+	
 			}
 		}
 		
@@ -883,10 +863,8 @@ public class ApplyFilter {
 					
 						}
 					}
-					
 					output.setXYCDouble(x, y,c, total);	
-				}
-				
+				}	
 				
 			}		
 		}
@@ -906,7 +884,7 @@ public class ApplyFilter {
 				output[output.length-1-i][j] = temp;
 			}			
 		}
-		
+
 		for(int i=0; i<output.length; ++i) {
 			for(int j=0; j<(output.length-1)/2; ++j) {
 				
@@ -915,12 +893,9 @@ public class ApplyFilter {
 				output[i][output.length-1-j] = temp;
 			}			
 		}
-		
 		return output;
 	}
 
-	
-	
 
 	private double[][] createPassIdealFilter(int N, double radius){
 		
@@ -934,8 +909,7 @@ public class ApplyFilter {
 				if(D<=radius)
 					filter[i][j] = 1;
 				else
-					filter[i][j] = 0;
-				
+					filter[i][j] = 0;	
 			}
 		}
 
@@ -953,7 +927,6 @@ public class ApplyFilter {
 				filter[i][j] = Math.exp((-1.0*D*D)/(2*radius*radius));
 			}
 		}
-
 		return filter;
 	}
 
@@ -973,7 +946,6 @@ public class ApplyFilter {
 		return filter;
 	}
 
-
 	private double[][] createHighPassButterwordFilter(int N, double radius, int order){
 		
 		double[][] filter = new double[N][N];
@@ -989,6 +961,7 @@ public class ApplyFilter {
 
 		return filter;
 	}
+	
 	private double[][] createHighPassGaussianFilter(int N, double radius){
 		
 		double[][] filter = new double[N][N];
@@ -1003,12 +976,4 @@ public class ApplyFilter {
 		}
 		return filter;
 	}
-	
 }
-
-
-
-
-
-
-
